@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [4.0.0](https://github.com/groton-school/slim-lti-shim/compare/v3.0.4...v4.0.0) (2025-09-09)
+
+### ⚠ BREAKING CHANGES
+
+* Support constructor injection by making static members dynamic ([0c55c6](https://github.com/groton-school/slim-lti-shim/commit/0c55c647d0097aab886313870623f62250c46181))
+
+
+---
+
 ## [3.0.4](https://github.com/groton-school/slim-lti-shim/compare/v3.0.3...v3.0.4) (2025-09-04)
 
 ### Bug Fixes
