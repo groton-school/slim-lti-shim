@@ -13,11 +13,10 @@ use GrotonSchool\Slim\LTI\Middleware\CookieMiddleware;
 use GrotonSchool\Slim\Norms\DependenciesInterface;
 use Packback\Lti1p3\Interfaces as Packback;
 use Packback\Lti1p3\LtiServiceConnector;
-use Psr\Container\ContainerInterface;
 
 class Dependencies implements DependenciesInterface
 {
-    public static function inject(ContainerBuilder $containerBuilder): void
+    public function inject(ContainerBuilder $containerBuilder): void
     {
         $containerBuilder->addDefinitions([
             // autowire packbackbooks/lti-1p3-tool implementations

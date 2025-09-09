@@ -16,7 +16,7 @@ use Slim\Interfaces\RouteGroupInterface;
 
 class RouteBuilder implements RouteBuilderInterface
 {
-    public static function define(App $app): RouteGroupInterface
+    public function define(App $app): RouteGroupInterface
     {
         return $app->group('/lti', function (RouteCollectorProxyInterface $lti) {
             $lti->post('/launch', LaunchAction::class);
