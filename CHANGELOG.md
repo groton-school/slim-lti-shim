@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [4.0.1](https://github.com/groton-school/slim-lti-shim/compare/v4.0.0...v4.0.1) (2025-09-15)
+
+### Bug Fixes
+
+* Reconnect broken registration complete view ([f17b39](https://github.com/groton-school/slim-lti-shim/commit/f17b398ffd0281c01e29f6e3a9fbf84c792b7e5d))
+
+
+---
+
 ## [4.0.0](https://github.com/groton-school/slim-lti-shim/compare/v3.0.4...v4.0.0) (2025-09-09)
 
 ### ⚠ BREAKING CHANGES
