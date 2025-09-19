@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace GrotonSchool\Slim\LTI\Domain;
 
 use Packback\Lti1p3;

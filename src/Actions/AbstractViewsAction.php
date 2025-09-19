@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace GrotonSchool\Slim\LTI\Actions;
 
 use GrotonSchool\Slim\Norms\AbstractAction;
