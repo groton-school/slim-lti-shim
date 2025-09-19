@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [4.1.1](https://github.com/groton-school/slim-lti-shim/compare/v4.1.0...v4.1.1) (2025-09-19)
+
+### Bug Fixes
+
+* Normalize inner middleware definitions ([3196e3](https://github.com/groton-school/slim-lti-shim/commit/3196e38edb41da00795caa304f4d5b13932eaa0f))
+
+
+---
+
 ## [4.1.0](https://github.com/groton-school/slim-lti-shim/compare/v4.0.1...v4.1.0) (2025-09-19)
 
 ### Features
