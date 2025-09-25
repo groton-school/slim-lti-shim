@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [4.1.2](https://github.com/groton-school/slim-lti-shim/compare/v4.1.1...v4.1.2) (2025-09-25)
+
+### Bug Fixes
+
+* Standardize on Bootstrap loading progress animation ([e3fc25](https://github.com/groton-school/slim-lti-shim/commit/e3fc257b20d965e7486d4c2cf80caf2aa79b91a8))
+
+
+---
+
 ## [4.1.1](https://github.com/groton-school/slim-lti-shim/compare/v4.1.0...v4.1.1) (2025-09-19)
 
 ### Bug Fixes
