@@ -5,16 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LTI Launch</title>
-    <style type="text/css">
-        body {
-            margin-top: 20%;
-            margin-left: 40%;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
-    <progress style="width: 20%; height: 1em;"></progress>
+    <div class="container">
+        <div class="progress position-absolute top-50 start-50 translate-middle" role="progressbar" aria-label="Loading&hellip;" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <form id="launch" method="post" action="<?= $action ?>">
         <?php foreach ($post as $key => $value) { ?>
             <input type="hidden" name="<?= $key ?>" value="<?= $value ?>" />
