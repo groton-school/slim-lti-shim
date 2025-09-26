@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [4.1.3](https://github.com/groton-school/slim-lti-shim/compare/v4.1.2...v4.1.3) (2025-09-26)
+
+### Bug Fixes
+
+* Lighter-weight spinner animation ([7eb1a9](https://github.com/groton-school/slim-lti-shim/commit/7eb1a9eca9d68129ce906f254860afb989f2c6a8))
+
+
+---
+
 ## [4.1.2](https://github.com/groton-school/slim-lti-shim/compare/v4.1.1...v4.1.2) (2025-09-25)
 
 ### Bug Fixes
