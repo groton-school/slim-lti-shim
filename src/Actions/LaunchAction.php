@@ -52,6 +52,7 @@ class LaunchAction extends AbstractViewsAction
                 $response,
                 'launch.php',
                 [
+                    'title' => 'LTI Launch',
                     'action' => $request->getUri()->getPath(),
                     'state' => $state,
                     'nonce' => $nonce,

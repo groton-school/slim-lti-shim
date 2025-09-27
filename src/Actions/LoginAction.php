@@ -36,6 +36,7 @@ class LoginAction extends AbstractViewsAction
                 $response,
                 'login.php',
                 [
+                    'title' => 'LTI Login',
                     'redirect' => $redirect,
                     'lti_storage_target' => $request->getParam('lti_storage_target')
                 ]
