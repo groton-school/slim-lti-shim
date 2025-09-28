@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace GrotonSchool\Slim\LTI\Actions;
 
+use App\Application\Settings\SettingsInterface;
 use GrotonSchool\Slim\LTI\Domain\Registration;
 use GrotonSchool\Slim\LTI\Infrastructure\CacheInterface;
 use GrotonSchool\Slim\LTI\Infrastructure\DatabaseInterface;
@@ -21,7 +22,8 @@ class RegistrationCompleteAction extends AbstractViewsAction
 
     public function __construct(
         private DatabaseInterface $database,
-        private CacheInterface $cache
+        private CacheInterface $cache,
+        private SettingsInterface $settings
     ) {
         parent::__construct();
     }
@@ -46,7 +48,13 @@ class RegistrationCompleteAction extends AbstractViewsAction
         ]);
         $registration = json_decode($regResponse->getBody()->getContents(), true);
         $this->database->saveRegistration(new Registration(array_merge($registration, $config)));
-        return $this->views->render($response, 'complete.php', ['title' => 'LTI Registration Complete']);
+        return $this->views->render(
+            $response,
+            'complete.php',
+            [
+                'title' => $this->settings->getToolName() . ': Registration Complete'
+            ]
+        );
     }
 
     protected function invokeHook(

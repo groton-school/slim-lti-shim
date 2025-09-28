@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace GrotonSchool\Slim\LTI\Actions;
 
+use App\Application\Settings\SettingsInterface;
 use GrotonSchool\Slim\LTI\Domain\LtiMessageLaunch;
 use GrotonSchool\Slim\LTI\Handlers\LaunchHandlerInterface;
 use GrotonSchool\Slim\LTI\Infrastructure\CacheInterface;
@@ -22,7 +23,8 @@ class LaunchAction extends AbstractViewsAction
         private CacheInterface $cache,
         private CookieInterface $cookie,
         private ILtiServiceConnector $serviceConnector,
-        private LaunchHandlerInterface $launchHandler
+        private LaunchHandlerInterface $launchHandler,
+        private SettingsInterface $settings
     ) {
         parent::__construct();
     }
@@ -52,7 +54,7 @@ class LaunchAction extends AbstractViewsAction
                 $response,
                 'launch.php',
                 [
-                    'title' => 'LTI Launch',
+                    'title' => $this->settings->getToolName(),
                     'action' => $request->getUri()->getPath(),
                     'state' => $state,
                     'nonce' => $nonce,

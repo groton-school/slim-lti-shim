@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace GrotonSchool\Slim\LTI\Actions;
 
+use App\Application\Settings\SettingsInterface;
 use GrotonSchool\Slim\LTI\Infrastructure\CacheInterface;
 use GrotonSchool\Slim\LTI\Infrastructure\CookieInterface;
 use GrotonSchool\Slim\LTI\Infrastructure\DatabaseInterface;
@@ -18,7 +19,8 @@ class LoginAction extends AbstractViewsAction
     public function __construct(
         protected DatabaseInterface $database,
         protected CacheInterface $cache,
-        protected CookieInterface $cookie
+        protected CookieInterface $cookie,
+        protected SettingsInterface $settings
     ) {
         parent::__construct();
     }
@@ -36,7 +38,7 @@ class LoginAction extends AbstractViewsAction
                 $response,
                 'login.php',
                 [
-                    'title' => 'LTI Login',
+                    'title' => $this->settings->getToolName(),
                     'redirect' => $redirect,
                     'lti_storage_target' => $request->getParam('lti_storage_target')
                 ]
