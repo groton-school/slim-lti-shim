@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [4.1.4](https://github.com/groton-school/slim-lti-shim/compare/v4.1.3...v4.1.4) (2025-09-28)
+
+### Bug Fixes
+
+* Detect when packback sends a MaxAge rather than an Expires [#11](https://github.com/groton-school/slim-lti-shim/issues/11) ([fe8630](https://github.com/groton-school/slim-lti-shim/commit/fe863021fae64ecfa82b05b366b184b71c16e671))
+
+
+---
+
 ## [4.1.3](https://github.com/groton-school/slim-lti-shim/compare/v4.1.2...v4.1.3) (2025-09-26)
 
 ### Bug Fixes
