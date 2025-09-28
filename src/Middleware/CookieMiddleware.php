@@ -48,11 +48,16 @@ class CookieMiddleware implements CookieInterface, MiddlewareInterface
     ): void {
         $this->cookies[$name] = SetCookie::create($name)
             ->withValue($value)
-            ->withExpires($exp)
             ->withPath('/')
             ->withSameSite(SameSite::none())
             ->withSecure()
             ->withPartitioned();
+
+        if ($exp != 0 && $exp < time()) {
+            $this->cookies[$name] = $this->cookies[$name]->withMaxAge($exp);
+        } else {
+            $this->cookies[$name] = $this->cookies[$name]->withExpires($exp);
+        }
 
         foreach ($options as $key => $option) {
             switch (strtolower($key)) {
@@ -73,6 +78,9 @@ class CookieMiddleware implements CookieInterface, MiddlewareInterface
                     break;
                 case 'httponly':
                     $this->cookies[$name] = $this->cookies[$name]->withHttpOnly($option);
+                    break;
+                case 'partitioned':
+                    $this->cookies[$name] = $this->cookies[$name]->withPartitioned($option);
                     break;
             }
         }
